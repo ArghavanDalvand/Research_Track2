@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<launch>
+
+    <param name="print_per_second" value= "2" />
+
+    <include file="$(find assignment_2_2022)/launch/assignment1.launch" />
+
+    <node pkg="second_assignment_rt1" type="action_client_node.py" name="action_client_node" launch-prefix="gnome-terminal --command" />
+    <node pkg="second_assignment_rt1" type="custom_msg_node.py" name="custom_msg_node" launch-prefix="gnome-terminal --command" />
+    <node pkg="second_assignment_rt1" type="service_node.py" name="service_node" launch-prefix="gnome-terminal --command" />
+    <node pkg="second_assignment_rt1" type="subscriber_position_node.py" name="subscriber_position_node" launch-prefix="gnome-terminal --command" />    
+</launch>
